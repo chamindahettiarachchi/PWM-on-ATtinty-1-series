@@ -9,7 +9,7 @@ int main(void){
     TCA0.SINGLE.CTRLB = TCA_SINGLE_WGMODE_SINGLESLOPE_gc    // single-slope PWM
                       | TCA_SINGLE_CMP0EN_bm;               // enable WO0
     TCA0.SINGLE.PER  = 255;                                 // PWM period  (~203 Hz @ 3.333 MHz, /64)
-    TCA0.SINGLE.CMP0 = 11;                                 // ~50% duty
+    TCA0.SINGLE.CMP0 = 128;                                 // ~50% duty
     TCA0.SINGLE.CTRLA = TCA_SINGLE_CLKSEL_DIV64_gc          // prescaler /64
                       | TCA_SINGLE_ENABLE_bm;               // start
 
